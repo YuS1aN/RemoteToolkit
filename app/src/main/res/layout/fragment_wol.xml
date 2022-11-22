@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_alias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/wol_alias_label"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/transparent"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/til_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wol_alias_hint"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/wol_ip_label"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/transparent"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/til_mac"
+        app:layout_constraintEnd_toEndOf="@id/til_alias"
+        app:layout_constraintStart_toStartOf="@id/til_alias"
+        app:layout_constraintTop_toBottomOf="@id/til_alias">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wol_ip_hint"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_mac"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/wol_mac_label"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/transparent"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/til_port"
+        app:layout_constraintEnd_toEndOf="@id/til_alias"
+        app:layout_constraintStart_toStartOf="@id/til_alias"
+        app:layout_constraintTop_toBottomOf="@id/til_ip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/wol_mac_hint"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_port"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:hint="@string/wol_port_label"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/transparent"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_send"
+        app:layout_constraintEnd_toEndOf="@id/til_alias"
+        app:layout_constraintTop_toBottomOf="@id/til_mac">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="@string/wol_port_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxEms="5" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/btn_send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_port" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toTopOf="@id/gl_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/til_port" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>

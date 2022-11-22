@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    namespace 'me.kbai.remotetoolkit'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "me.kbai.remotetoolkit"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "RemoteToolkit" + "-" + buildType.name + "-v" + defaultConfig.versionName + ".apk"
+                outputFileName = fileName
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation deps.kotlin.core
+    implementation deps.kotlin.stdlib
+    implementation deps.appcompat
+    implementation deps.material
+    implementation deps.constraintlayout
+    testImplementation deps.junit.java
+    androidTestImplementation deps.junit.android
+    androidTestImplementation deps.espresso.core
+
+    implementation deps.gson
+
+    implementation deps.navigation.runtime
+    implementation deps.navigation.fragment
+    implementation deps.navigation.ui
+
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.livedata
+
+    implementation deps.hilt.core
+    annotationProcessor deps.hilt.compiler
+    kapt deps.hilt.compiler
+
+    implementation deps.glide.core
+    implementation deps.glide.recyclerview
+}
