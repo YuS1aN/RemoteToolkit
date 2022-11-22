@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_24"
+            android:title="@string/nav_home" />
+    </group>
+
+    <item android:title="@string/nav_group_toolkit">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_wol"
+                    android:title="@string/nav_wol" />
+            </group>
+        </menu>
+    </item>
+</menu>
