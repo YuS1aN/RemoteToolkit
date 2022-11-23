@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Remote Toolkit</string>
+    <string name="app_name" translatable="false">Remote Toolkit</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="nav_header_title">@string/app_name</string>
     <string name="nav_header_subtitle">819165594@qq.com</string>
@@ -7,13 +7,18 @@
     <string name="nav_wol">Wake On LAN</string>
     <string name="nav_group_toolkit">Tools</string>
     <string name="wol_alias_label">Alias</string>
-    <string name="wol_ip_label">IP or hostname</string>
-    <string name="wol_mac_label">MAC address</string>
+    <string name="wol_ip_label">Hostname</string>
+    <string name="wol_mac_label">Mac Address</string>
     <string name="wol_port_label">Port</string>
     <string name="wol_alias_hint">HOME PC</string>
-    <string name="wol_ip_hint">0.0.0.0</string>
+    <string name="wol_ip_hint">IP address or host name</string>
     <string name="wol_mac_hint">11:22:33:AA:BB:CC</string>
-    <string name="wol_port_hint">11451</string>
+    <string name="wol_port_hint">9</string>
     <string name="save">Save</string>
-    <string name="send">Send</string>
+    <string name="wake">Wake</string>
+    <string name="wol_host_error">Please check your ip address or host name.</string>
+    <string name="wol_mac_error">Please check your mac address.</string>
+    <string name="wol_port_error">Please check the port range.</string>
+    <string name="wol_send_error">Failed to send packet.</string>
+    <string name="wol_success">Send the magic package to %s successfully.</string>
 </resources>
