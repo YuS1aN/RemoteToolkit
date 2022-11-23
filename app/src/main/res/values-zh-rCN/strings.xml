@@ -1,0 +1,23 @@
+<resources>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">@string/app_name</string>
+    <string name="nav_header_subtitle">819165594@qq.com</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_wol">Wake On LAN</string>
+    <string name="nav_group_toolkit">工具</string>
+    <string name="wol_alias_label">名称</string>
+    <string name="wol_ip_label">主机名</string>
+    <string name="wol_mac_label">Mac地址</string>
+    <string name="wol_port_label">端口</string>
+    <string name="wol_alias_hint">我的电脑</string>
+    <string name="wol_ip_hint">IP地址或主机名</string>
+    <string name="wol_mac_hint">11:22:33:AA:BB:CC</string>
+    <string name="wol_port_hint">9</string>
+    <string name="save">保存</string>
+    <string name="wake">唤醒</string>
+    <string name="wol_host_error">请输入你的IP地址或主机名</string>
+    <string name="wol_mac_error">请检查你的MAC地址</string>
+    <string name="wol_port_error">请输入正确的端口号</string>
+    <string name="wol_send_error">发送失败</string>
+    <string name="wol_success">发送幻数据包到 %s 成功</string>
+</resources>

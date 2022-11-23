@@ -10,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.annotation.IdRes
 import androidx.core.content.getSystemService
@@ -117,3 +118,15 @@ fun Activity.grantUriPermission(intent: Intent, uri: Uri) {
 
 fun FragmentActivity.findNavControllerByManager(@IdRes id: Int) =
     (supportFragmentManager.findFragmentById(id) as NavHostFragment).navController
+
+fun Activity.showToast(s: String, duration: Int = Toast.LENGTH_LONG) =
+    Toast.makeText(this, s, duration).show()
+
+fun Fragment.showToast(s: String, duration: Int = Toast.LENGTH_LONG) =
+    Toast.makeText(context, s, duration).show()
+
+fun Activity.showToast(@IdRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
+    Toast.makeText(this, resId, duration).show()
+
+fun Fragment.showToast(@IdRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
+    Toast.makeText(context, resId, duration).show()

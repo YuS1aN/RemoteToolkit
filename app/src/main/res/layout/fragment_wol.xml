@@ -101,7 +101,7 @@
             android:gravity="center_horizontal"
             android:hint="@string/wol_port_hint"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="number"
             android:maxEms="5" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/save"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@id/btn_send"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til_port" />
@@ -120,7 +121,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/send"
+        android:text="@string/wake"
         app:layout_constraintBottom_toTopOf="@id/gl_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_save"
