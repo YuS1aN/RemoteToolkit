@@ -20,4 +20,6 @@
     <color name="color_text_primary">@color/primary_light</color>
     <color name="color_text_light">@color/white</color>
     <color name="color_text_dark">@color/dark_grey</color>
+
+    <color name="error">#FF3C3C</color>
 </resources>

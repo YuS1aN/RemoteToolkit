@@ -13,6 +13,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     ) = FragmentHomeBinding.inflate(inflater)
 
     override fun initView() {
-        viewBinding.tvHome.text = "HOME"
+        viewBinding.tvHome.text = "Remote Toolkit"
     }
 }

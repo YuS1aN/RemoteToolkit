@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="errorTextColor">@color/error</item>
+        <item name="errorIconTint">@color/error</item>
+        <item name="boxStrokeErrorColor">@color/error</item>
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <item name="expandedHintEnabled">false</item>
+    </style>
+</resources>

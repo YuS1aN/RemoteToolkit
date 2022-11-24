@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_ping"
+        android:name="me.kbai.remotetoolkit.ui.ping.PingFragment"
+        android:label="@string/nav_ping"
+        tools:layout="@layout/fragment_ping" />
+
+    <fragment
         android:id="@+id/nav_wol"
         android:name="me.kbai.remotetoolkit.ui.wol.WolFragment"
         android:label="@string/nav_wol"

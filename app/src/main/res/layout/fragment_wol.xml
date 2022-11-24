@@ -17,12 +17,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_alias"
+        style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/wol_alias_label"
-        android:orientation="horizontal"
-        app:boxBackgroundColor="@color/transparent"
-        app:expandedHintEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/til_host"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,12 +38,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_host"
+        style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/wol_ip_label"
-        android:orientation="horizontal"
-        app:boxBackgroundColor="@color/transparent"
-        app:expandedHintEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/til_mac"
         app:layout_constraintEnd_toEndOf="@id/til_alias"
         app:layout_constraintStart_toStartOf="@id/til_alias"
@@ -62,12 +58,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_mac"
+        style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/wol_mac_label"
-        android:orientation="horizontal"
-        app:boxBackgroundColor="@color/transparent"
-        app:expandedHintEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/til_port"
         app:layout_constraintEnd_toEndOf="@id/til_alias"
         app:layout_constraintStart_toStartOf="@id/til_alias"
