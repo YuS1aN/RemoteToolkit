@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_grey">#CCCCCC</color>
     <color name="lightest_grey">#E6E6E6</color>
+    <color name="grey">#808080</color>
     <color name="dark_grey">#333333</color>
     <color name="darkest_grey">#1A1A1A</color>
     <color name="transparent">#00000000</color>
@@ -16,6 +17,7 @@
     <color name="primary_light">#31ECD2</color>
     <color name="primary_dark">#00DCBE</color>
 
+    <color name="color_text_primary">@color/primary_light</color>
     <color name="color_text_light">@color/white</color>
     <color name="color_text_dark">@color/dark_grey</color>
 </resources>

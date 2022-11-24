@@ -52,6 +52,8 @@ dependencies {
     implementation deps.kotlin.core
     implementation deps.kotlin.stdlib
     implementation deps.appcompat
+    implementation deps.activity
+    implementation deps.fragment
     implementation deps.material
     implementation deps.constraintlayout
     testImplementation deps.junit.java

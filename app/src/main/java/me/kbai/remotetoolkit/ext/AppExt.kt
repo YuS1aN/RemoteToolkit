@@ -13,6 +13,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.annotation.IdRes
+import androidx.annotation.StringRes
 import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -125,8 +126,8 @@ fun Activity.showToast(s: String, duration: Int = Toast.LENGTH_LONG) =
 fun Fragment.showToast(s: String, duration: Int = Toast.LENGTH_LONG) =
     Toast.makeText(context, s, duration).show()
 
-fun Activity.showToast(@IdRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
+fun Activity.showToast(@StringRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
     Toast.makeText(this, resId, duration).show()
 
-fun Fragment.showToast(@IdRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
+fun Fragment.showToast(@StringRes resId: Int, duration: Int = Toast.LENGTH_LONG) =
     Toast.makeText(context, resId, duration).show()
