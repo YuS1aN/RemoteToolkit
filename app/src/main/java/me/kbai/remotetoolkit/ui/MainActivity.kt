@@ -6,6 +6,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import dagger.hilt.android.AndroidEntryPoint
 import me.kbai.remotetoolkit.R
 import me.kbai.remotetoolkit.base.BaseActivity
 import me.kbai.remotetoolkit.databinding.ActivityMainBinding
@@ -14,6 +15,7 @@ import me.kbai.remotetoolkit.ext.findNavControllerByManager
 /**
  * @author sean 2022/11/22
  */
+@AndroidEntryPoint
 class MainActivity : BaseActivity() {
     private lateinit var mBinding: ActivityMainBinding
     private val mViewModel by viewModels<MainViewModel>()

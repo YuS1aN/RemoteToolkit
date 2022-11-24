@@ -16,9 +16,10 @@
     <string name="wol_port_hint">9</string>
     <string name="save">Save</string>
     <string name="wake">Wake</string>
-    <string name="wol_host_error">Please check your ip address or host name.</string>
+    <string name="wol_host_error">Please enter the correct host name or IP address.</string>
     <string name="wol_mac_error">Please check your mac address.</string>
-    <string name="wol_port_error">Please check the port range.</string>
+    <string name="wol_port_error">Please enter the correct port number.</string>
     <string name="wol_send_error">Failed to send packet.</string>
     <string name="wol_success">Send the magic package to %s successfully.</string>
+    <string name="remove">remove</string>
 </resources>

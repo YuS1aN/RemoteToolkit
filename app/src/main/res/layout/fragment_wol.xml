@@ -23,7 +23,7 @@
         android:orientation="horizontal"
         app:boxBackgroundColor="@color/transparent"
         app:expandedHintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/til_ip"
+        app:layout_constraintBottom_toTopOf="@+id/til_host"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +39,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_ip"
+        android:id="@+id/til_host"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/wol_ip_label"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_alias">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_ip"
+            android:id="@+id/et_host"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/wol_ip_hint"
@@ -71,7 +71,7 @@
         app:layout_constraintBottom_toTopOf="@+id/til_port"
         app:layout_constraintEnd_toEndOf="@id/til_alias"
         app:layout_constraintStart_toStartOf="@id/til_alias"
-        app:layout_constraintTop_toBottomOf="@id/til_ip">
+        app:layout_constraintTop_toBottomOf="@id/til_host">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_mac"
@@ -111,7 +111,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/save"
-        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@id/btn_send"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til_port" />
@@ -128,9 +127,12 @@
         app:layout_constraintTop_toBottomOf="@id/til_port" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_history"
+        android:id="@+id/rv_record"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gl_list" />
+        app:layout_constraintTop_toBottomOf="@id/gl_list"
+        tools:listitem="@layout/item_record" />
 </androidx.constraintlayout.widget.ConstraintLayout>
