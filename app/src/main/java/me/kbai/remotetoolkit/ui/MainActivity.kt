@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
 
         mAppBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_wol
+                R.id.nav_home, R.id.nav_ping, R.id.nav_wol
             ), mBinding.drawerLayout
         )
         setupActionBarWithNavController(navController, mAppBarConfiguration)

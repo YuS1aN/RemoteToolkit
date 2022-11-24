@@ -4,6 +4,7 @@
     <string name="nav_header_title">@string/app_name</string>
     <string name="nav_header_subtitle">819165594@qq.com</string>
     <string name="nav_home">Home</string>
+    <string name="nav_ping">Ping</string>
     <string name="nav_wol">Wake On LAN</string>
     <string name="nav_group_toolkit">Tools</string>
     <string name="wol_alias_label">Alias</string>
@@ -21,5 +22,8 @@
     <string name="wol_port_error">Please enter the correct port number.</string>
     <string name="wol_send_error">Failed to send packet.</string>
     <string name="wol_success">Send the magic package to %s successfully.</string>
-    <string name="remove">remove</string>
+    <string name="remove">Remove</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="cmd_error">Command failed to run.</string>
 </resources>

@@ -3,6 +3,7 @@
     <string name="nav_header_title">@string/app_name</string>
     <string name="nav_header_subtitle">819165594@qq.com</string>
     <string name="nav_home">首页</string>
+    <string name="nav_ping">Ping</string>
     <string name="nav_wol">Wake On LAN</string>
     <string name="nav_group_toolkit">工具</string>
     <string name="wol_alias_label">名称</string>
@@ -21,4 +22,6 @@
     <string name="wol_send_error">发送失败</string>
     <string name="wol_success">发送幻数据包到 %s 成功</string>
     <string name="remove">移除</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
 </resources>

@@ -10,6 +10,7 @@
     <item android:title="@string/nav_group_toolkit">
         <menu>
             <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_ping" android:title="@string/nav_ping"/>
                 <item
                     android:id="@+id/nav_wol"
                     android:title="@string/nav_wol" />
