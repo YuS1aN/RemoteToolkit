@@ -1,5 +1,5 @@
 # RemoteToolkit
 
 ### Current features:
-> Ping
-> Wake On LAN
+* Ping
+* Wake On LAN
