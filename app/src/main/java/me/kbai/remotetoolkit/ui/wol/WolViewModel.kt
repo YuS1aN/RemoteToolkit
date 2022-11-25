@@ -5,12 +5,14 @@ import android.os.Build
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.JsonParseException
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.kbai.remotetoolkit.Constants
 import me.kbai.remotetoolkit.model.FuncResponse
@@ -39,19 +41,19 @@ class WolViewModel @Inject constructor(
 
     init {
         _wolRecords.value = ArrayList()
-        readRecords()
+        viewModelScope.launch { readRecords() }
     }
 
-    private fun readRecords() {
+    private suspend fun readRecords() = withContext(Dispatchers.IO) {
         if (!mRecordFile.exists()) {
-            return
+            return@withContext
         }
         val type = object : TypeToken<List<WolRecord>>() {}.type
         try {
-            val map: MutableList<WolRecord> = gson.fromJson(mRecordFile.readText(), type)
+            val list: MutableList<WolRecord> = gson.fromJson(mRecordFile.readText(), type)
             _wolRecords.value!!.run {
                 clear()
-                addAll(map)
+                addAll(list)
             }
         } catch (e: JsonParseException) {
             e.printStackTrace()

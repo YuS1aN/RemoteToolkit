@@ -24,4 +24,5 @@
     <string name="remove">移除</string>
     <string name="start">开始</string>
     <string name="stop">停止</string>
+    <string name="cmd_error">命令运行失败</string>
 </resources>

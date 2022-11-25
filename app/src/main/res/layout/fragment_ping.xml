@@ -59,6 +59,7 @@
             android:id="@+id/tv_out"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
             android:background="@color/grey"
             android:overScrollMode="never"
             android:padding="5dp"
@@ -70,10 +71,8 @@
         android:id="@+id/rv_record"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
         android:layout_weight="4"
         android:orientation="vertical"
-        android:visibility="invisible"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_record" />
 </LinearLayout>

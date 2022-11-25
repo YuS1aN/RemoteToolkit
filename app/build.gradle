@@ -79,7 +79,4 @@ dependencies {
     implementation deps.hilt.core
     annotationProcessor deps.hilt.compiler
     kapt deps.hilt.compiler
-
-    implementation deps.glide.core
-    implementation deps.glide.recyclerview
 }
